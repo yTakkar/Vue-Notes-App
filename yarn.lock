@@ -1558,12 +1558,6 @@ handlebars@^4.0.5:
   optionalDependencies:
     uglify-js "^2.6"
 
-handy-copy@^1.0.6:
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/handy-copy/-/handy-copy-1.0.7.tgz#739d542feabd3f896068d3a178f1bb297cdb658a"
-  dependencies:
-    jquery "^3.2.1"
-
 handy-notification@^1.0.23:
   version "1.0.26"
   resolved "https://registry.yarnpkg.com/handy-notification/-/handy-notification-1.0.26.tgz#7847f66114cb0f9ba942714436322b88c169c764"
@@ -1573,12 +1567,6 @@ handy-notification@^1.0.23:
 handy-timeago@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/handy-timeago/-/handy-timeago-1.0.1.tgz#1701e62915afc4ae39efc1bd4a2247e1fdd08adb"
-
-handy-tooltip@^1.0.10:
-  version "1.0.13"
-  resolved "https://registry.yarnpkg.com/handy-tooltip/-/handy-tooltip-1.0.13.tgz#b9c9bdef1a9564c9f84512df1a1b2fff2b08caaf"
-  dependencies:
-    jquery "^3.2.1"
 
 has-ansi@^2.0.0:
   version "2.0.0"
