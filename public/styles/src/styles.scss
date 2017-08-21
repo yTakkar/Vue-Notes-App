@@ -4,22 +4,6 @@
   margin-top: 70px;
 }
 
-// for active links
-.ha_active{ background: $second_border; }
-
-// PROFILE PAGE
-.aligner{
-	position: relative;
-	width: 614px;
-	left: 367px;
-
-	.notes{
-		margin-top: 15px;
-		margin-bottom: 50px;
-	}
-
-}
-
 // FOR NOTE
 .note{
   background: $ff;
@@ -109,15 +93,6 @@
   }
 
 }
-
-// WELCOME AND ERROR PAGE
-.welcome_div{
-  @include center;
-  & img{
-    height: 300px;
-  }
-}
-
 
 // view note
 .view_note{
@@ -222,7 +197,6 @@
 .content_editor{
   margin-top: 5px;
 }
-
 
 // PAGE END
 .page_end{
