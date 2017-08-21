@@ -55,18 +55,7 @@ a{
   color: #d8c3c3 !important;
 }
 
-i{
-  pointer-events: none;
-}
-
-hr{
-  border: 0;
-  border-top: 1px solid #c1c7cd;
-}
-
-li{
-  list-style: none;
-}
+i{ pointer-events: none; }
 
 input[type="text"],
 input[type="email"],
@@ -97,8 +86,6 @@ input[type="email"]:focus,
 textarea:focus{
   border: 1px solid #56b4ef !important;
   box-shadow: 0px 0px 5px 1px #c8def0;
-  /*-webkit-box-shadow: 0px 0px 5px 0px #bed3dc;
-  -moz-box-shadow: 0px 0px 5px 0px #bed3dc;*/
 }
 
 input[type="submit"],
@@ -106,7 +93,7 @@ input[type="button"],
 .pri_btn{
   font-weight: 600;
   background: $pric;
-  border: 1px solid $pric; /*#3e91b3*/
+  border: 1px solid $pric;
   color: $ff;;
   border-radius: 3px;
   cursor: pointer;
@@ -114,12 +101,8 @@ input[type="button"],
 
   &:hover{ opacity: .9; }
 
-}
+  &:focus{ background: #198bd0; }
 
-input[type="submit"]:focus,
-input[type="button"]:focus,
-.pri_btn:focus{
-  background: #198bd0;
 }
 
 input[type="submit"]:disabled,
@@ -169,11 +152,9 @@ input[type="button"]:disabled{
   position: fixed;
   background: #333;
   left: 2%;
-  /*transform: translate(-50%, -50%);*/
   color: $ff;
   border-radius: 3px;
   padding: 12px 80px 12px 25px;
-  /*padding: 10px 30px;*/
   font-size: 15px;
   cursor: pointer;
   text-align: left;
@@ -196,7 +177,6 @@ input[type="button"]:disabled{
     position: relative;
     text-align: center;
     width: 150px;
-    /*margin-bottom: 10px;*/
     display: block;
     left: 48%;
     transform: translate(-50%);
@@ -207,7 +187,6 @@ input[type="button"]:disabled{
     text-align: center;
     display: block;
     left: -5px;
-    /*top: -5px;*/
   }
 
 }
@@ -235,7 +214,6 @@ input[type="button"]:disabled{
     padding: 10px;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
-    // font-weight: 600;
 
     & span.title{
       font-weight: 600;
