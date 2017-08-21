@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-title data-title="View Note" >
     <transition name="fade" >
       <div class='view_note modal'>
         <div class="v_n_header modal_header">
