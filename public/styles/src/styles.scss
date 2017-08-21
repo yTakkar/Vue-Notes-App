@@ -1,0 +1,436 @@
+@import 'defaults';
+
+.notes_wrapper{
+  margin-top: 70px;
+}
+
+// for active links
+.ha_active{ background: $second_border; }
+
+// PROFILE PAGE
+.aligner{
+	position: relative;
+	width: 614px;
+	left: 367px;
+
+	.notes{
+		margin-top: 15px;
+		margin-bottom: 50px;
+	}
+
+}
+
+// FOR NOTE
+.note{
+  background: $ff;
+  padding: 10px;
+  display: block;
+  font-size: 14px;
+  border: 1px solid $header_border;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  cursor: pointer;
+
+  &:hover{
+    border-color: $ee;
+  }
+
+  & .note_header{
+    margin-bottom: 7px;
+
+    & img{
+      height: 31px;
+      width: 31px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    & .note_h_left{
+      display: inline-block;
+      margin-left: 5px;
+      width: 90%;
+
+      & .note_username{
+        display: block;
+        color: $dark;
+        font-weight: 600;
+        position: relative;
+        top: 2px;
+      }
+
+      & .note_time{
+        font-size: 13px;
+        color: $d_light;
+        position: relative;
+        top: -1px;
+      }
+
+    }
+
+  }
+
+  & .note_title, & .note_content{
+    color: $dark;
+  }
+
+  & .note_title{
+    margin-bottom: 4px;
+    font-weight: 600;
+  }
+
+}
+
+.create_note{
+  width: 380px;
+
+  & input[type='text'], & textarea{
+      padding: 7px !important;
+      width: 94%;
+      font-size: 14px;
+  }
+
+  & input[type="text"]{
+    margin-bottom: 9px;
+  }
+
+  & textarea{
+    height: 250px;
+  }
+
+  & .c_n_bottom{
+    margin-top: 1px;
+
+    & input[type='submit']{
+      margin-left: 5px;
+      padding: 5px 10px;
+      margin-right: 6px;
+      font-size: 14px;
+    }
+  }
+
+}
+
+// WELCOME AND ERROR PAGE
+.welcome_div{
+  @include center;
+  & img{
+    height: 300px;
+  }
+}
+
+
+// view note
+.view_note{
+  width: 600px;
+
+  & .v_n_middle{
+
+    & .v_n_info{
+      margin-bottom: 5px;
+
+      & img{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: inline-block;
+      }
+
+      & .v_n_left{
+        display: inline-block;
+        margin-left: 5px;
+        position: relative;
+        top: -5px;
+
+        & .v_n_username{
+          display: block;
+          font-weight: 600;
+          font-size: 15px;
+          color: inherit;
+
+        }
+
+        & .v_n_time{
+          font-size: 13px;
+          color: $d_light;
+          position: relative;
+          top: -2px;
+        }
+
+      }
+
+    }
+
+    & .v_n_title{
+      font-weight: 600;
+      display: block;
+      margin-bottom: 3px;
+      font-size: 15px;
+      outline: none;
+    }
+
+    & .v_n_content{
+      display: block;
+      outline: none;
+    }
+
+    & .v_n_title[contenteditable='true'],
+    & .v_n_content[contenteditable='true']{
+      border: 1px solid #54BBFF;
+      padding: 5px 5px !important;
+      border-radius: 2px;
+    }
+
+  }
+
+  & .v_n_bottom {
+
+    a{ margin-left: 5px; }
+
+    & .v_n_cancel{ margin-right: 5px; }
+
+    & .v_n_int{
+      position: absolute;
+      color: $d_light;
+      bottom: 10px;
+      left: 10px;
+
+      span.like_unlike{
+        display: inline-block;
+        height: 24px;
+        cursor: pointer;
+        transition: all .1s ease-in-out;
+
+        &:hover{
+          color: $dark;
+          transform: scale(1.1);
+        }
+
+      }
+
+      & .like_unlike_disabled{
+        cursor: not-allowed !important;
+        pointer-events: none !important;
+        color: #d8c3c3 !important;
+      }
+
+    }
+
+  }
+
+}
+
+.content_editor{
+  margin-top: 5px;
+}
+
+
+// PAGE END
+.page_end{
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+  color: $d_light;
+  cursor: pointer;
+  border-radius: 3px;
+  border: 1px solid $fb;
+
+  &:hover{ border: 1px solid $ee; }
+
+}
+
+// PROMPT MODAL
+.prompt{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  background: $ff;
+  width: 400px;
+  border-radius: 3px;
+  @include modal-shadow;
+
+  & .prompt-top{
+    padding: 10px 10px;
+    background: $third-border;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom: 1px solid $ee;
+
+    & .prompt-title{
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    & span:last-of-type{
+      display: inline-block;
+      position: absolute;
+      right: 7px;
+      top: 7px;
+      padding: 2px;
+      color: $d_light;
+      height: 20px;
+      cursor: pointer;
+      border: 1px solid $third-border;
+      border-radius: 3px;
+
+      &:hover{
+        color: #1b2733;
+        border: 1px solid #e2dbdb;
+      }
+
+      & i{
+        font-size: 20px;
+        position: relative;
+        left: 1px;
+      }
+
+    }
+
+  }
+
+  & .prompt-middle{
+    padding: 4px 10px;
+    font-size: 14px;
+    margin-top: 11px;
+    margin-bottom: 10px;
+    position: relative;
+
+    & span{
+      display: inline-block;
+      position: relative;
+    }
+
+  }
+
+  & .prompt-bottom{
+    padding: 8px 10px 8px 10px;
+    border-top: 1px solid $ee;
+    text-align: right;
+
+    & a{
+      display: inline-block;
+      padding: 4px 12px;
+      font-weight: 600;
+
+      &:last-of-type{
+        margin-left: 5px;
+      }
+
+    }
+
+  }
+
+}
+
+// HOME
+.home{
+  position: relative;
+  width: 607px;
+  margin-left: 365px;
+  margin-bottom: 60px;
+
+  & .home_info{
+    margin-bottom: 10px;
+    background: $ff;
+    padding: 14px 10px;
+    border: 1px solid $header_border;
+    border-radius: 3px;
+    font-size: 15px;
+
+    & a{
+      position: absolute;
+      right: 10px;
+      padding: 4px 12px;
+      top: 10px;
+    }
+
+  }
+
+}
+
+// PROMPT MODAL
+.prompt{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  background: $ff;
+  width: 400px;
+  border-radius: 3px;
+  @include modal-shadow;
+
+  & .prompt-top{
+    padding: 10px 10px;
+    background: $third-border;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom: 1px solid $ee;
+
+    & .prompt-title{
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    & span:last-of-type{
+      display: inline-block;
+      position: absolute;
+      right: 7px;
+      top: 7px;
+      padding: 2px;
+      color: $d_light;
+      height: 20px;
+      cursor: pointer;
+      border: 1px solid $third-border;
+      border-radius: 3px;
+
+      &:hover{
+        color: #1b2733;
+        border: 1px solid #e2dbdb;
+      }
+
+      & i{
+        font-size: 20px;
+        position: relative;
+        left: 1px;
+      }
+
+    }
+
+  }
+
+  & .prompt-middle{
+    padding: 4px 10px;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+
+    & span{
+      display: inline-block;
+      position: relative;
+    }
+
+  }
+
+  & .prompt-bottom{
+    padding: 8px 10px 8px 10px;
+    border-top: 1px solid $ee;
+    text-align: right;
+
+    & a{
+      display: inline-block;
+      padding: 4px 12px;
+      font-weight: 600;
+
+      &:last-of-type{
+        margin-left: 5px;
+      }
+
+    }
+
+  }
+
+}
