@@ -1,4 +1,5 @@
 <template>
+
   <div>
     <router-link :to="{ name: 'view-note', params: { id: note.id } }" v-for="note in notes" :key="note.id" >
       <div class="note" >
@@ -18,6 +19,7 @@
       </div>
     </router-link>
   </div>
+
 </template>
 
 <script>
@@ -25,3 +27,7 @@ export default {
   props: ['notes']
 }
 </script>
+
+<style scoped>
+
+</style>

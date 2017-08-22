@@ -1,4 +1,5 @@
 <template>
+
   <div class='create_note modal' v-title data-title='Create Note' >
     <transition name='fade' >
       <form @submit.prevent='createNote' >
@@ -16,6 +17,7 @@
       </form>
     </transition>
   </div>
+
 </template>
 
 <script>
@@ -40,3 +42,7 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+
+</style>

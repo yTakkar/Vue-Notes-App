@@ -1,4 +1,5 @@
 <template>
+
   <div v-title data-title="View Note" >
     <transition name="fade" >
       <div class='view_note modal'>
@@ -60,6 +61,7 @@
         </div>
       </div>
     </transition>
+
     <Prompt
       v-if="deleting"
       title="Delete note"
@@ -68,7 +70,9 @@
       @back="_toggle('deleting')"
       @action="deleteNote"
     />
+
   </div>
+
 </template>
 
 <script>
@@ -131,3 +135,7 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+
+</style>

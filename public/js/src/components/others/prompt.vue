@@ -1,4 +1,5 @@
 <template>
+
   <transition name="fade" >
     <div class="prompt">
       <div class="prompt-top">
@@ -14,6 +15,7 @@
       </div>
     </div>
   </transition>
+
 </template>
 
 <script>
@@ -42,3 +44,7 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+
+</style>

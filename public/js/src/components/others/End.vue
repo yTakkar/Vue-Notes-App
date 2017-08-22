@@ -1,6 +1,6 @@
 <template>
   <div class="page_end" @click="ToTop" >
-      <span>{{ mssg }}</span>
+    <span>{{ mssg }}</span>
   </div>
 </template>
 
@@ -16,9 +16,14 @@ export default {
   },
   methods: {
     ToTop(){
-      $('html, body').animate({ scrollTop: 0 }, 450)
+      $('html, body').animate({
+        scrollTop: 0
+      }, 450)
     }
   }
 }
 </script>
 
+<style scoped>
+
+</style>
