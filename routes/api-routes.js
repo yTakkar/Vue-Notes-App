@@ -34,7 +34,7 @@ app.post('/note-details', (req, res) => {
 app.post('/delete-note', (req, res) => {
   let { id } = req.body
   db.query('DELETE FROM notes WHERE id=?', [ id ])
-    .then(s => res.json({ mssg: 'Note deleted!!' }) )
+    .then(() => res.json({ mssg: 'Note deleted!!' }) )
     .catch(e => console.log(e) )
 })
 
