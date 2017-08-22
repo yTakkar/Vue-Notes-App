@@ -13,7 +13,8 @@ const
 // Project files
 const
   chalk = require('./models/chalk'),
-  mRoutes = require('./routes/main-routes')
+  mRoutes = require('./routes/main-routes'),
+  apiRoutes = require('./routes/api-routes')
 
 // View Engine Setup
 app.engine('hbs', hbs({
@@ -30,6 +31,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.static(path.join(__dirname, '/public')))
 
 // Routes
+app.use('/api', apiRoutes)
 app.use('/', mRoutes)
 
 app.listen(PORT, () => chalk.rainbow('App running..') )
