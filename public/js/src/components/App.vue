@@ -6,6 +6,9 @@
 
 <script>
 export default {
+  data(){
+    return {}
+  },
   created(){
     this.$store.dispatch('GET_NOTES')
   }

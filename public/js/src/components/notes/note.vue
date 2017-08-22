@@ -24,7 +24,12 @@
 
 <script>
 export default {
-  props: ['notes']
+  props: {
+    notes: {
+      type: Array,
+      required: true
+    }
+  }
 }
 </script>
 

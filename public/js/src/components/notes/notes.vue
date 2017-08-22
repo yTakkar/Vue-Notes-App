@@ -26,7 +26,9 @@ import End from '../others/End.vue'
 
 export default {
   computed: {
-    notes(){ return this.$store.state.notes.notes },
+    notes(){
+      return this.$store.state.notes.notes
+    },
     noOfNotes(){
       let
         l = parseInt(this.notes.length),

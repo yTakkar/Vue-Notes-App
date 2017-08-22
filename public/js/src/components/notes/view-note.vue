@@ -128,7 +128,8 @@ export default {
   },
   created(){
     let { $http, $route: { params } } = this
-    $http.post('/api/note-details', { id: params.id }).then(s => this.note = s.body )
+    $http.post('/api/note-details', { id: params.id })
+      .then(s => this.note = s.body )
   },
   components: {
     'Prompt': Prompt
