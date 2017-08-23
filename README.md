@@ -25,7 +25,7 @@ A Notes App created with Vue, Vuex, Vue-Rouer & MySQL. Basically it's a MEVN app
 
 4. Start the server
     ```javascript
-    npm run start
+    npm start
     ```
 
 5. Now run the app
