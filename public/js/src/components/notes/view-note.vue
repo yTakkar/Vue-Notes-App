@@ -62,6 +62,8 @@
       </div>
     </transition>
 
+    <Overlay v-if="deleting" :visible="true" />
+
     <Prompt
       v-if="deleting"
       title="Delete note"
@@ -76,9 +78,10 @@
 </template>
 
 <script>
-import Prompt from '../others/prompt.vue'
 import $ from 'jquery'
 import Notify from 'handy-notification'
+import Prompt from '../others/prompt.vue'
+import Overlay from '../others/overlay.vue'
 
 export default {
   data(){
@@ -132,7 +135,8 @@ export default {
       .then(s => this.note = s.body )
   },
   components: {
-    'Prompt': Prompt
+    'Prompt': Prompt,
+    'Overlay': Overlay
   }
 }
 </script>
