@@ -130,9 +130,9 @@ export default {
     }
   },
   created(){
-    let { $http, $route: { params } } = this
-    $http.post('/api/note-details', { id: params.id })
-      .then(s => this.note = s.body )
+    let { $http, $route: { params: { id } }, $router } = this
+    $http.post('/api/note-details', { id }).then(s => this.note = s.body )
+    $http.post('/api/valid-note', { id }).then(s => !s.body ? $router.push('/notes') : null )
   },
   components: {
     'Prompt': Prompt,

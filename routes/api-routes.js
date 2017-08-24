@@ -46,4 +46,11 @@ app.post('/edit-note', (req, res) => {
     .catch(e => console.log(e) )
 })
 
+// INVALID NOTE CHECKING
+app.post('/valid-note', (req, res) => {
+  db.query('SELECT COUNT(id) AS count FROM notes WHERE id=? LIMIT 1', [ req.body.id ])
+    .then(is => res.json(is[0].count == 1 ? true : false) )
+    .catch(err => console.log(err) )
+})
+
 module.exports = app
