@@ -7,7 +7,7 @@
     </div>
 
     <Note v-if="notes.length >= 0" :notes="notes" />
-    <Nothing v-else-if="notes.length == 0" />
+    <Nothing v-if="notes.length == 0" mssg="No notes. Go ahead and create one!!" />
     <End v-if="notes.length > 0" />
 
     <router-view name="create-note" />
