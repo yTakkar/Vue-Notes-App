@@ -107,9 +107,9 @@ export default {
       }
     },
     deleteNote(){
-      let { $http, $route: { params } } = this
+      let { $http, $route: { params }, $store: { dispatch } } = this
       $http.post('/api/delete-note', { id: params.id }).then(s => {
-        this.$store.dispatch('DELETE_NOTE', params.id)
+        dispatch('DELETE_NOTE', params.id)
         this.Back()
         Notify({ value: s.body.mssg })
       })
