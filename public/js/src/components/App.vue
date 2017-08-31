@@ -1,6 +1,6 @@
 <template>
   <div class="notes_wrapper" >
-    <router-view></router-view>
+    <router-view v-title data-title="Vue Notes App" ></router-view>
   </div>
 </template>
 

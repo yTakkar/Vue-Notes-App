@@ -1,6 +1,6 @@
 <template>
 
-  <div v-title data-title="View Note" >
+  <div >
     <transition name="fade" >
       <div class='view_note modal'>
         <div class="v_n_header modal_header">
@@ -133,6 +133,9 @@ export default {
     let { $http, $route: { params: { id } }, $router } = this
     $http.post('/api/note-details', { id }).then(s => this.note = s.body )
     $http.post('/api/valid-note', { id }).then(s => !s.body ? $router.push('/notes') : null )
+  },
+  mounted(){
+    $('.v_n_cancel').focus()
   },
   components: {
     'Prompt': Prompt,

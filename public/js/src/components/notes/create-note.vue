@@ -1,6 +1,6 @@
 <template>
 
-  <div class='create_note modal' v-title data-title='Create Note' >
+  <div class='create_note modal'>
     <transition name='fade' >
       <form @submit.prevent='createNote' >
 
