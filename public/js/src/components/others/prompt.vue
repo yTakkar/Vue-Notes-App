@@ -23,6 +23,8 @@
 </template>
 
 <script>
+import $ from 'jquery'
+
 export default {
   props: {
     title: {
@@ -45,6 +47,10 @@ export default {
     action(){
       this.$emit('action')
     }
+  },
+  mounted(){
+    $('.v_n_delete').blur()
+    $('.prompt-done').focus()
   }
 }
 </script>
