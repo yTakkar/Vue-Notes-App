@@ -409,3 +409,31 @@ input[type="submit"]:disabled, input[type="button"]:disabled {
       right: 10px;
       padding: 4px 12px;
       top: 10px; }
+
+.welcome_div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+  .welcome_div img {
+    height: 300px; }
+
+.error_div {
+  width: 436px; }
+  .error_div .error_info {
+    margin-bottom: 10px;
+    width: 100%; }
+    .error_div .error_info span {
+      font-size: 20px; }
+  .error_div .error_bottom {
+    text-align: right;
+    margin-top: 3px; }
+    .error_div .error_bottom a {
+      display: inline-block;
+      padding: 4px 15px;
+      font-weight: 600;
+      font-size: 14px; }
+      .error_div .error_bottom a:last-of-type {
+        margin-left: 5px; }

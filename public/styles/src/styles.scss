@@ -235,3 +235,43 @@
     }
   }
 }
+
+// WELCOME AND ERROR PAGE
+.welcome_div{
+  @include center;
+  & img{
+    height: 300px;
+  }
+}
+
+.error_div{
+  width: 436px;
+
+  .error_info{
+    margin-bottom: 10px;
+    width: 100%;
+    & span{
+      font-size: 20px;
+    }
+  }
+
+  .error_bottom {
+    text-align: right;
+    margin-top: 3px;
+
+    & a{
+      display: inline-block;
+      padding: 4px 15px;
+      font-weight: 600;
+      font-size: 14px;
+
+      &:last-of-type{
+        margin-left: 5px;
+      }
+
+    }
+
+  }
+
+
+}
