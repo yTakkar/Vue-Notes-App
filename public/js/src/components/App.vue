@@ -1,13 +1,15 @@
 <template>
   <div class="notes_wrapper" >
-    <router-view v-title data-title="Vue Notes App" ></router-view>
+    <router-view v-title='title' ></router-view>
   </div>
 </template>
 
 <script>
 export default {
   data(){
-    return {}
+    return {
+      title: "Vue Notes App"
+    }
   },
   created(){
     this.$store.dispatch('GET_NOTES')

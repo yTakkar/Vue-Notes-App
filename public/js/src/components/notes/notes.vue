@@ -10,10 +10,10 @@
     <Nothing v-if="notes.length == 0" mssg="No notes. Go ahead and create one!!" />
     <End v-if="notes.length > 0" />
 
-    <router-view name="create-note" v-title data-title='Create Note'  />
+    <router-view name="create-note" v-title='createTitle'  />
     <router-view name="overlay" />
 
-    <router-view name="view-note" v-title data-title="View Note" />
+    <router-view name="view-note" v-title="viewTitle" />
     <router-view name="overlay" />
 
   </div>
@@ -25,6 +25,12 @@ import Nothing from '../others/Nothing.vue'
 import End from '../others/End.vue'
 
 export default {
+  data(){
+    return {
+      createTitle: 'Create Note',
+      viewTitle: 'View Note'
+    }
+  },
   computed: {
     notes(){
       return this.$store.state.notes.notes

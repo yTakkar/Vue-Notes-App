@@ -40,7 +40,7 @@ A Notes App created with Vue, Vuex, Vue-Rouer & MySQL. Basically it's a MEVN app
 
 5. Now run the app
     ```javacript
-    localhost:[PORT]     PORT = YOU DEFINED IN .ENV FILE. 2250 BY DEFAULT!!
+    localhost:[PORT]     PORT = YOU DEFINED IN .ENV FILE. 2260 BY DEFAULT!!
     ```
 
 6. Enjoy!!
