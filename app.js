@@ -8,11 +8,11 @@ const
   bodyParser = require('body-parser'),
   favicon = require('serve-favicon'),
   PORT = process.env.PORT,
+  hl = require('handy-log'),
   app = express()
 
 // Project files
 const
-  chalk = require('./models/chalk'),
   mRoutes = require('./routes/main-routes'),
   apiRoutes = require('./routes/api-routes')
 
@@ -34,4 +34,4 @@ app.use(express.static(path.join(__dirname, '/public')))
 app.use('/api', apiRoutes)
 app.use('/', mRoutes)
 
-app.listen(PORT, () => chalk.rainbow('App running..') )
+app.listen(PORT, () => hl.rainbow('App running..') )
