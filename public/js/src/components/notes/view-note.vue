@@ -67,7 +67,7 @@
     <Prompt
       v-if="deleting"
       title="Delete note"
-      content="This post will be deleted. There's no undo so you won't be able to find it."
+      content="This note will be deleted. There's no undo so you won't be able to find it."
       actionText="Delete"
       @back="_toggle('deleting')"
       @action="deleteNote"
